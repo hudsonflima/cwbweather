@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import RainIntensityIndicator from './RainIntensityIndicator';
 import { CiTempHigh } from 'react-icons/ci'
 import { BsSun, BsMoon, BsCloudRainHeavy } from 'react-icons/bs'
 
