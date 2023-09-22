@@ -27,7 +27,7 @@ function GridWeather() {
     <div className="relative text-center items-center shadow-lg ml-5 border border-slate-200 overflow-x-auto">
       <div className="max-w-full overflow-x-auto">
         <table className="w-full text-sm bg-slate-50 text-left pb-10 text-gray-500 shadow-2xl border border-slate-100 rounded-lg">
-          <thead className="text-xs text-gray-800 uppercase bg-gray-200">
+          <thead className="text-xs text-slate-100 uppercase bg-slate-500">
             <tr>
               <th scope="col" className="px-6 py-3 lg:px-8 lg:py-4">
                 Data
@@ -49,13 +49,13 @@ function GridWeather() {
               </th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="bg-slate-50 text-gray-600 hover:text-gray-50 hover:bg-slate-400 transition-all">
             {weather.hourly.time.map((time, index) => (
               <tr
                 key={index}
-                className="bg-slate-50 text-gray-600 hover:bg-gray-200"
+                className="bg-slate-50 text-gray-600 hover:text-gray-50 hover:bg-slate-300 transition-all"
               >
-                <td className="px-6 py-4 lg:px-8 lg:py-6 font-medium whitespace-nowrap text-gray-800">
+                <td className="px-6 py-4 lg:px-8 lg:py-6 font-medium whitespace-nowrap text-gray-800 hover:text-gray-50">
                   {moment(time).format("DD/MM/YYYY")}
                 </td>
                 <td className="px-6 py-4 lg:px-8 lg:py-6 text-gray-500">
