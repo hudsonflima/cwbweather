@@ -4,7 +4,6 @@ import Footer from './components/Footer'
 import React from 'react';
 import TemperatureChart from './components/TemperatureChart';
 import RainChart from './components/RainChart';
-import MsgMetar from './components/MsgMetar';
 import GridForecast from './components/GridForecast';
 
 function App() {
