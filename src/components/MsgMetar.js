@@ -19,7 +19,7 @@ const MsgMetar = () => {
             });
     }, []);
 
-    return <div>METAR: {weatherData}</div>;
+    return <div>METAR: {metarMessage}</div>;
 };
 
 export default MsgMetar;
