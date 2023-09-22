@@ -4,6 +4,7 @@ import Footer from './components/Footer'
 import React from 'react';
 import TemperatureChart from './components/TemperatureChart';
 import RainChart from './components/RainChart';
+import MsgMetar from './components/MsgMetar';
 import GridForecast from './components/GridForecast';
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
   return (
     <div className="App bg-slate-500">
       <Header />
+      <MsgMetar />
       <Weather />
       <div className="bg-slate-200 rounded-xl mx-8 p-4 transition-all shadow-lg shadow-slate-800 pb-10">
         <h2 className="text-xl text-gray-800  font-semibold mb-4">Forecast</h2>
