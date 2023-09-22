@@ -12,7 +12,6 @@ function App() {
   return (
     <div className="App bg-slate-500">
       <Header />
-      <MsgMetar />
       <Weather />
       <div className="bg-slate-200 rounded-xl mx-8 p-4 transition-all shadow-lg shadow-slate-800 pb-10">
         <h2 className="text-xl text-gray-800  font-semibold mb-4">Forecast</h2>
