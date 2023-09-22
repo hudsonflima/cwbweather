@@ -21,8 +21,8 @@ function App() {
       </div>
       <br />
       <div className="bg-slate-200 rounded-xl mx-8 p-4 transition-all shadow-lg shadow-slate-800">
-        <h2 className="text-xl text-gray-800  font-semibold mb-4">Temperatura do dia</h2>
-        <div className="grid grid-cols-1 gap-2">
+        <h2 className="text-xl text-gray-800 sm:grid-cols-3 font-semibold mb-4">Temperatura do dia</h2>
+        <div className="grid grid-cols-1  gap-2">
           <GridForecast />
         </div>
       </div>

@@ -32,50 +32,40 @@ const WeatherCard = () => {
     return `${horas}:${minutos}`;
   }
 
-
   return (
-
     <div className="">
       {weatherData.daily.time.map((date, index) => (
-        <div>
-          <div className="pt-4 pb-6">
-            <div className="grid grid-cols-3 col-span-3 gap-12 px-8">
-              {/* Card 01 - Temperatura */}
-              <div className="bg-slate-800 rounded-xl p-4 transition-all shadow-lg shadow-slate-800">
-                <div className="text-xl text-gray-50 font-semibold mb-4 flex items-center">
-                  <span className="mr-2">Temperatura</span> <CiTempHigh size={30} color='orange'/>
-                </div>
-                <div className="grid grid-cols-2 gap-2">
-                  <div>
-                    <p className="text-gray-50 text-xl">Máxima: <span className='text-green-300 font-semibold'>{weatherData.daily.temperature_2m_max[index]}°C</span></p>
-                  </div>
-                  <div>
-                    <p className="text-gray-50 text-xl">Mínima: <span className='text-blue-300 font-semibold'>{weatherData.daily.temperature_2m_min[index]}°C</span></p>
-                  </div>
-                </div>
+        <div key={index} className="pt-4 pb-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-3 gap-4 px-8">
+            {/* Card 01 - Temperatura */}
+            <div className="bg-slate-800 rounded-xl p-4 transition-all shadow-lg shadow-slate-800">
+              <div className="text-xl text-gray-50 font-semibold mb-4 flex items-center">
+                <span className="mr-2">Temperatura</span> <CiTempHigh size={30} color='orange'/>
               </div>
-
-              {/* Card 02 - Nascente-Poente */}
-              <div className="bg-slate-800 rounded-xl p-4 transition-all shadow-lg shadow-slate-800">
-                <h2 className="text-xl text-gray-50  font-semibold mb-4">Nascer / Pôr do Sol</h2>
-                <div className="grid grid-cols-2 gap-2">
-                  <div>
-                    <p className="text-gray-50 mr-4 flex"><BsSun size={30} color='gold'/> <span className="ml-4 text-lg">{formatarHora(weatherData.daily.sunrise[index])}h</span></p>
-                  </div>
-                  <div>
-                    <p className="text-gray-50 mr-4 flex"><BsMoon size={30} color='lightblue'/> <span className="ml-4 text-lg">{formatarHora(weatherData.daily.sunset[index])}h</span></p>
-                  </div>
-                </div>
+              <div>
+                <p className="text-gray-50 text-xl">Máxima: <span className='text-green-300 font-semibold'>{weatherData.daily.temperature_2m_max[index]}°C</span></p>
               </div>
+              <div>
+                <p className="text-gray-50 text-xl">Mínima: <span className='text-blue-300 font-semibold'>{weatherData.daily.temperature_2m_min[index]}°C</span></p>
+              </div>
+            </div>
 
-              {/* Card 03 - Chuva */}
-              <div className="bg-slate-800 rounded-xl p-4 transition-all shadow-lg shadow-slate-800">
-                <h2 className="text-xl text-gray-50 font-semibold mb-4 flex items-center"><span className="mr-2">Chuva</span> <BsCloudRainHeavy size={30} color='gray'/></h2>
-                <div className="grid grid-cols-2 gap-2">
-                  <div>
-                    <p className="text-gray-50 text-xl">Volume: <span className="ml-4 text-lg">{weatherData.daily.rain_sum[index]}mm</span></p>
-                  </div>
-                </div>
+            {/* Card 02 - Nascente-Poente */}
+            <div className="bg-slate-800 rounded-xl p-4 transition-all shadow-lg shadow-slate-800">
+              <h2 className="text-xl text-gray-50 font-semibold mb-4">Nascer / Pôr do Sol</h2>
+              <div>
+                <p className="text-gray-50 mr-4 flex"><BsSun size={30} color='gold'/> <span className="ml-4 text-lg">{formatarHora(weatherData.daily.sunrise[index])}h</span></p>
+              </div>
+              <div>
+                <p className="text-gray-50 mr-4 flex"><BsMoon size={30} color='lightblue'/> <span className="ml-4 text-lg">{formatarHora(weatherData.daily.sunset[index])}h</span></p>
+              </div>
+            </div>
+
+            {/* Card 03 - Chuva */}
+            <div className="bg-slate-800 rounded-xl p-4 transition-all shadow-lg shadow-slate-800">
+              <h2 className="text-xl text-gray-50 font-semibold mb-4 flex items-center"><span className="mr-2">Chuva</span> <BsCloudRainHeavy size={30} color='gray'/></h2>
+              <div>
+                <p className="text-gray-50 text-xl">Volume: <span className="ml-4 text-lg">{weatherData.daily.rain_sum[index]}mm</span></p>
               </div>
             </div>
           </div>
