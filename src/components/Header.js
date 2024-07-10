@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { TiWeatherPartlySunny } from 'react-icons/ti';
 import axios from 'axios';
 
 const Header = () => {
@@ -36,7 +35,7 @@ const Header = () => {
     <header className="bg-slate-800 p-4 text-white">
       <div className="container mx-auto flex items-end text-justify justify-between">
         <div>
-        <span className="text-2xl font-semibold mx-full mx-6">Previsão do Tempo em Curitiba</span>
+          <span className="text-2xl font-semibold px-8 items-start justify-between">Previsão do Tempo em Curitiba</span>
         </div>
         {currentTemperature !== null && currentApparentTemperature !== null && (
           <div className="text-right mr-10">

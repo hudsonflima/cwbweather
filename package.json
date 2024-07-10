@@ -9,6 +9,8 @@
     "apexcharts": "^3.42.0",
     "autoprefixer": "^10.4.16",
     "axios": "^1.5.0",
+    "devextreme": "23.2.7",
+    "devextreme-react": "23.2.7",
     "moment": "^2.29.4",
     "postcss-cli": "^10.1.0",
     "react": "^18.2.0",
